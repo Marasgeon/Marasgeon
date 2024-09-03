@@ -1,0 +1,29 @@
+% Constraint forces
+% Simple PD control for constraint surface h
+% lambda = -Kp(3,3) * h - Kd(3,3) * dq(3); 
+
+% Error dynamics, control law, and joint torques
+% ----------------------------------------------
+% Position error (difference q(desired) - q(actual))
+e = qdes - q;
+
+% Velocity error (difference dq(desired) - dq(actual))
+de = dqdes - dq;
+
+% Acceleration error (difference ddq(desired) - ddq(actual))
+ie = e0 + trapz(t, e);
+
+% Control law PID
+u = Kp * e + Ki * ie + Kd * de; 
+
+% Joint torques   
+tau = M * (Kp * (qdes - q) + Ki * ie + Kd * (dqdes - dq)) - C * dq - G + lambda;
+
+% Friction and damping effects 
+% tau = tau - friction_coeff * dq - damping_coeff * dq;
+
+% Derivative of the state vector y = [q1 ; q2 ; q3 ; dq1 ; dq2 ; dq3]
+dy = zeros(9, 1);
+dy(1:3) = dq;
+dy(4:6) = M\(tau - C * dq - G);
+dy(7:9) = de;
