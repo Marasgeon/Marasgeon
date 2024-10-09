@@ -1,0 +1,37 @@
+#Arithmetic Operators
++,-,*,/,//,%
+#Value Assignment Operators
+=
++=,-=,*=,/= (x=x+1,x=x-1,x=x*1,x=x/1)
+#Bitwise Operators (We'll deal with them much later)
+& (bitwise and)
+| (bitwise or)
+^ (bitwise xor)
+~ (not)
+<< (shift left)
+>> (shift right)
+#Relational Operators
+== (equal to)
+!= (not equal to)
+>,<,>=,<= (greater than, less than,
+greater than or equal to, less than or equal to)
+Compare two numbers or two strings
+Return True/False
+Especially for strings it is considered
+that lowercase letters are lexicographically bigger
+than CAPITALs
+if letters is None:
+#Logical Operators
+and (logical and) : Returns True if both expressions/statements are True
+or (logical or) : Returns True if at least one expression/statement is True
+not (logical not) : Returns the reverse value of the expression/statement
+They operate on logical variables!
+-----------------------------------
+Priority of operations
+Arithmetic Operators > Relational Operators > Logical Operators
+
+Note: The precedence of logical operators is:
+- or (lowest priority)
+- and
+- not (highest priority)
+
