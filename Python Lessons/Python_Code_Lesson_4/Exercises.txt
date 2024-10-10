@@ -1,0 +1,73 @@
+Exercise 1: Friendships don't last forever
+- Make a list of your 3 best friends.
+- Print it out.
+- Replace the friend you have saved in the first
+position on the list with someone else.
+- Reprint the list
+- Print the items on the list one by one.
+
+Exercise 2: The maximum (again)
+Construct a program which:
+- Define a list of three integers
+- Calculate the maximum element of the list and printed out
+
+Exercise 3: Front - back
+- Make a list of 10 items of your choice.
+- Print the items in positions 3 to 6 in three ways:
+- One by one using straight numbering.
+- One by one using the reverse numbering.
+- All together, by cutting out the appropriate part of the list (print directly the part, without using an auxiliary list)
+
+Exercise 4: Average
+In the 1844 greek elections (first parliamentary elections), the seats of the parties were:
+- Russian Party: 55 seats.
+- English Party: 28 seats
+- French Party: 20 seats
+Calculate the average number of seats of the first two parties
+and print it out:
+- By cutting out the part of the list that interests you.
+- By accessing the data through the list.
+Reminder: The average of N numbers is calculated by dividing
+the sum of the numbers by N.
+
+Exercise 5: A queue at a checkout
+- Construct an empty list named cash_desk
+- Add Tom to the queue
+- Add Bob to the queue
+- Print the queue
+- Remove the 1st person in the queue, and print that
+was served.
+- Add Pam to the queue
+- Add Jim to the queue
+- Print the queue
+- Remove the 1st person in the queue, and print that
+was served.
+- Print the queue
+
+Exercise 6: A stack of documents
+In an inefficient customer service office, the employee has a stack of applications and:
+- Any request that comes to him puts it on top of the stack
+- When he decides to process a request, he grabs
+the one on top of the stack
+Build a program that models his workload:
+- The stack is initially empty.
+- Bob's request comes in.
+- John's request comes in.
+- Print the stack.
+- Serves the last request, printing who it's for.
+- Pat's request is coming in.
+- Print the stack
+
+Exercise 7: Classification of real numbers
+Construct a program which:
+- Accepts from the input three real numbers and stores them in a list.
+- It sorts the list
+- It prints the list
+
+Exercise 8: Favorite Movies List
+Build a program which:
+- Initialize a list of your 4 favorite movies
+Then:
+- It will ask the user to enter a new favorite
+- If the movie already exists in the list, it will inform the user that it has not been saved
+- If the movie is not in the list, it will add it the list, and then sort the list and then print the list, as well as the number of the user's favorite movies
