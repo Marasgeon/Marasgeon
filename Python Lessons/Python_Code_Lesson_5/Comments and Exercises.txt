@@ -1,0 +1,146 @@
+Variables, control condition (if), Loops the heart of programming.
+
+By "Iteration" we mean the two Python commands (for and while)
+- which allow us to repeat the same code many times.
+- (which is extremely useful and a key feature of programming)
+- repetitive tasks
+
+
+# Exercise 1
+# Build a program which:
+# - Take a number as input and print the number's square
+# (power of 2) of it.
+# - The above is done iteratively, until the user types "quit", at which point it will terminate.
+
+
+# Exercise 2
+# Build a program which:
+# - Read from the input 10 numbers
+# - It will add them up and print their sum.
+# Note: Slightly advanced exercise.
+
+
+# Exercise 3
+# Repeat Exercise 2, except that the 10 numbers will
+# be initially stored in a list.
+
+
+# Exercise 4: Maximum (again)
+# Build a program that:
+# - Defines a list of 10 integers
+# - Locates the maximum of them (using iteration).
+
+There is no do...while in Python.
+The iteration structure for:
+- repeats its code for each element belonging to a sequence
+- Sequences are strings and lists, but also ranges (today) and tuples (next lesson)
+
+for and while usecases!
+
+
+# Exercise 5: Play with the range
+# Construct a program which:
+# - Print all even numbers from 10 to 20
+# - Will print all odd numbers from 19 to 11
+# (in descending order)
+# - Will print those odd numbers from 1 to
+# 29 that are also multiples of 3.
+
+
+# Exercise 6: Accessing specific items in a list
+# Construct a program which:
+# - Define a list of 5 cities
+# - The list will print out those cities that are at even positions in the list.
+
+
+# Exercise 7: Accessing specific items in a list
+# Construct a program that creates a list of all even numbers from 0 to 1000, and then prints the list.
+
+# Exercise 8: Sorting numbers
+# Construct a program which:
+# - Will take as input a number that must be between 3 and 20, let be N.
+# - It will read from the input N integers and assign them
+# and store them in a list.
+# - It will sort the list of numbers
+# - It will print it
+
+
+# Break
+# - If during the execution of a loop we decide that we want to interrupt its execution
+# (i.e. not to execute the next steps of the loop), we use the break command:
+# - Common syntax (e.g., in for, but also applies to while):
+
+
+# Continue
+# - If during the execution of a loop we decide that
+# we want to bypass the current iteration and
+# and move on to the next loop, we use the
+# continue
+# - Common syntax (e.g. in for, but also applies to while):
+
+
+# Else:
+# - As long as a loop reaches its termination (without a break) we can
+# add a block that will executed at the end with else.
+# It is used alongside break.
+
+
+# Exercise 9.1: Guess the Number
+# We will construct our first game, "Guess the Number".
+# - The program will "hide" a number.
+# - We will try to guess it.
+# - The program will guide us: e.g. if we type
+# number that is smaller than the hidden number, the program will
+# display an appropriate message.
+#
+# First, start the construction:
+# - Storing in a variable the "hidden" number.
+# - Repeatedly the user enters a number and if it is the same
+# as the hidden number then display a success message and terminate.
+# - Consider how you can make the iteration run
+# "forever", so that the program only terminates if
+# the user has found the number.
+#
+# Exercise 9.2: Extension with messages
+# Extend the program so that:
+# - Display guidance messages about whether the user has typed
+# a smaller or larger number than the hidden number
+#
+# Exercise 9.3: Expansion with maximum number of attempts
+# Extend the program so that:
+# - Define a variable that represents the maximum number
+# of attempts allowed.
+# - Define one more variable that measures how many attempts
+# the user has made.
+# - Stop execution and display a message to the user
+# that it has lost if it reaches the maximum number
+# of attempts allowed.
+
+
+# # Observation: Print is a polymorphic function. Here we see that if we put end=" " as its second argument,
+# it does not do line change, but continues printing
+# on the same line.
+
+
+# Exercise 10: The party
+# - Keeps a list of your 3 best friends
+# - It will keep a second list of the 10 who have been invited to a party
+# - It will count how many of your best friends are
+# are invited to the party
+# - If there are less than 2, then you will decline the invitation
+# to the party, otherwise you will accept it.
+
+
+# Exercise 11: Pythagorean triads
+# Construct a program which:
+# - Will print all triads (a,b,c) with the property that:
+# a^2 + b^2 = c^2
+# - For integers 1<=a,b,c<=20
+
+
+# Exercise 12: Isosceles Triangle
+# Construct a program which:
+# - Will store the number of rows in a variable with
+# The program will store the number of lines in a variable named N.
+# - It will print an isosceles triangle with N lines.
+# - For example, for N=5:
