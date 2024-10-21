@@ -1,0 +1,78 @@
+A tuple is a collection with a specific order. The values cannot be changed (immutable)
+- Beware that there is an ordering (in addition to which objects are stored, we are also interested in the order in which they
+stored.
+- It has similar behaviour to the list, except that in the list we can modify the values (mutable)
+
+Tuples declaration :
+- Define a tuple using a name variable and enclosing the values in parentheses.
+
+Behavior:
+ - Same as the list:
+ - indexing: e.g. my_tuple[1], my_tuple[-2]
+ - Range: e.g. my_tuple[0:4]
+ - Checks: e.g. if element in tuple:
+ - loops: e.g. for element in tuple:
+ - Obviously, it has no methods that modify the tuple, such as pop() and append().
+
+We use the tuple:
+- If we know that the data in the array is not going to change, we prefer the tuple to the list.
+
+List comprehensions:
+- They provide a "faster" syntax to iteratively construct a list
+
+Notes:
+- 3D tables are defined accordingly (as a list containing 2D tables
+- We do not extend the mathematical usage, since the package numPy, offers complete mathematical functionality
+
+
+------------------------
+Comments
+------------------------
+We comment on our code when:
+- something needs explaining, to make it more readable, or as a comment during its construction to help us remember something.
+One-line comments:
+- Starts with #
+- Anything following the # until the end of the line is a comment.
+
+Example :
+
+# My brilliant code starts here
+if rocket is ready:
+	launch("mars") # change planet if necessary
+
+Multi-line comments:
+- Starts with """ (triple double quotes)
+- We write our extensive commentary on the following lines.
+- Ends with """ (triple double quotation marks)	
+
+Example : 
+
+"""
+This code is not working.
+read_python is not working properly..
+"""
+while kim not presses_button:
+	read_python()
+
+-------------------------------------------
+Code Style:
+-------------------------------------------
+- Are some conventions to make our code more
+readable.
+- Guido (creator of Python): "We spend more time reading our code, than to write it."
+- PEP8 (Python Enhancement Protocol 8 - google it!) specifies recommendations that developers should follow for code style.
+Examples:
+- Alignment should be done with 4 spaces and not tabs.
+- When breaking a line into multiple lines the
+alignment to be done with 4 additional spaces.
+- Keep lines of code to 79 characters (so that
+fit in the console)
+- A list displayed on multiple lines has the
+bracket that opens on the 1st line, then the items with a level of identation in the following ones and finally the bracket that closes on the last line without alignment.
+- The classes and the function definition must
+followed by two blank lines.
+PyCharm:
+- Incorporates these guidelines.
+- and highlights "errors" in the code style.
+- We can follow its instructions to
+incorporate these recommendations into our program.
