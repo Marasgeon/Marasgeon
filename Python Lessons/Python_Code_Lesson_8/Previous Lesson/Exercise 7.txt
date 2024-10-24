@@ -1,0 +1,39 @@
+Exercise 7.1: Memory Game with Cards
+
+In the well-known memory card game:
+- We are given a set of face-down cards, shuffled
+- The cards are diads, i.e. every two cards have the same thing.
+- The player chooses two cards, turns them face up and:
+- If they are the same, he leaves them face up.
+- If they are different, he closes them again.
+
+Start the construction by defining a list, length 8, which will be containing 2 times the numbers 1,2,3,4
+- Place the numbers in random order
+- for now, the shuffling of the numbers is done in a pinch (hard-coded), later we will learn how to initialize it randomly.
+
+
+Exercise 7.2: Current status list
+
+Define a separate list showing the current state
+of the game. Choose a coding of the items so that
+to reflect the user's guesses:
+- Show which cards are face down.
+- Show which cards are face up.
+- Show which cards are temporarily open.
+
+Exercise 7.3: Guessing
+
+Extend the program so that the player iterates:
+- Selects 2 positions (must be from 0 to 7 and the
+the corresponding cards must be face down)
+- Print the current state with both cards face up.
+- If they are the same, they stay open, otherwise they are closed again. Until all cards are face up, at which point the game ends.
+Give functionality, with appropriate messages to the player.
+
+Exercise 7.4: Number of attempts (score)
+
+Extend the program to count the number of of the player's attempts(scores) :
+- At the end of the game, display how many attempts the player has made.
+
+Note: hard exercise, backend, add graphics....
+two roles, programmer and user.

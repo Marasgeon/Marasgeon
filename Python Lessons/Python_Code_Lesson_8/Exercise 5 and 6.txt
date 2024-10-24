@@ -1,0 +1,270 @@
+
+A set is a collection of items in no particular order.
+- Beware that, as in mathematical sets, there is no order and no repetition of an element is allowed.
+- A set can be changed (mutable) e.g. by adding or removing elements in it
+- But an element of the set cannot be changed (elements are immutable)
+
+<h4>Declaration of the set</h4>
+
+- We define a set using some variable name and joining the values in curly braces {}.
+
+<h4>We use the set:</h4>
+
+ - When we are only interested in **which** elements belong to the set 
+ collection.
+
+<h4>Comments:</h4>
+
+- Each element must exist exactly once in the
+set, so any duplicates are ignored
+- There is a peculiarity with the empty set. It does not work 
+obvious {} (since this is bound to the definition of the
+empty "dictionary" as we will see in the next lesson)
+- We expect the order of the elements to be random.
+
+Example 1: sets.py
+
+<h4>Behavior:</h4>
+
+- Indexes and ranges do not exist (they are meaningless)
+- Basically we do:
+- checks: e.g. if element in set:
+- loops: e.g. for element in set:
+- Has methods that modify the set (addition,
+(adding elements, deleting elements) and operations (intersection, union, etc.)
+- Cannot contain e.g. lists (mutable)
+
+Example 2: no.lists.in.set.py
+
+<h3>Methods for sets</h4>
+
+1. Methods of adding item(s) to a set
+- set_name.add(element)
+	- Adds the element to the set set_name.
+- set_name.update(collection)
+	- Adds the elements of the collection (list, tuple, set, string, range) to the set set_name.
+
+Example 3: set.add.elements.py
+
+2. Methods of removing item(s) from a set
+- set_name.remove(element)
+	- Removes the element from the set set_name.
+	- Causes an error if the element does not exist.
+- set_name.discard(element)
+	- Removes the element from the set set_name.
+	- Does not cause an error if the element does not exist.
+- set_name.pop()
+	- Removes an element from the set.
+- set_name.clear()
+	- Removes all elements from the set
+
+3. Copy set
+- The = again points to the same set (reference)
+- To make an entry we use the
+copy() method
+
+Example 4: set.copy.py
+
+4. Conversions from other types of collections
+- set_name = set(collection): converts the collection to
+set.
+
+Example 5: set.convert.delete.py
+
+<h5>Exercise 1: Subset construction</h5>
+
+Construct a program which
+- Initialize a variable N with the value 5.
+- It will construct the set A={1,2,...,N}
+- Then for each element of the set, it will construct a
+tuple with its number and its square
+- All these elements should belong to a set.
+The answer should be (the tuples not necessarily with this in that order):
+{(1,1), (2,4), (3,9), (4,16), (5,25)}
+
+<h5>Exercise 2: Making hexes in LOTTO</h5>
+
+Construct a program that selects random 6-number sets of
+LOTTO with the properties:
+- Two of the numbers will be in the range 10-19
+- Two of the numbers will be in the range 20-39
+- One number will be an even number in the range 1-9
+- One number will be odd in the range 40-49
+The program should construct 10 such random 6's and and print them out.
+
+(We use the randrange.py program)
+
+<h5>Operations on sets: all the basic operations on sets that we know from mathematics:</h5>
+
+Operation
+ Explanation
+R = A | B
+R = A.union(B)
+ Returns the union ∪ (elements of A or B)
+R = A & B
+R = A.intersection(B)
+ Returns the intersection ∩ (elements of A and B)
+R = A -B 
+R = A.difference(B)
+  Returns the difference (elements of A that do not belong to B)
+R = A ^ B
+R = A.symmetric_difference(B)
+Returns the symmetric difference A - B ∩ B - A (non-shared elements of A and B)
+A.issubset(B)
+ T/F depending on whether A ⊆ B
+A.issuperset(B)
+ T/F depending on whether A ⊇ B
+A.isdisjoint(B)
+ T/F depending on whether A, B are foreign to each other
+A.update(B) # union 
+A.intersection_update(B)
+A.difference_update(B)
+A.symmetric_difference_update(B)
+ Variants of operations, not returning new set, but acting on the calling set the method. E.g. A.update(B) is equivalent to A ∪ B
+
+<h5>Functions (built-in): </h5>
+
+- len(A): integer of set A
+- max(A): maximum element of A
+- min(A): minimum element of A
+- sum(A): sum of elements of A
+
+Example 6: set.operations.py
+
+<h5>Exercise 3: Sets of Numbers</h5>
+
+Construct the following sets of natural numbers:
+1) The set of even numbers from 0 to 100
+2) The set of odd numbers from 0 to 100
+3) The multiples of 3 from 0 to 100
+4) The set of the prime numbers from 0 to 100 (see and previous lesson, exercise 4)
+Print their contents, as well as the number of elements of each set.
+
+Then use these to construct and print the sets
+of natural numbers from 0 to 100 that:
+1) Are even or multiples of 3
+2) Are odd primes
+3) They are prime but not odd
+4) They are odd or prime but not both odd and prime
+
+<h5>Exercise 4: Dividing into groups</h5>
+
+The teacher of a classroom wants to build a program that is divided into groups.
+which:
+- Given N (let's say N even) students of the class
+- She will divide them into N/2 groups of 2 students, with randomly chosen groups of 2 students.
+She will assign them a group task.
+Help the teacher to make two divisions into random groups of 2, one for the math lesson and one for the geography lesson.
+
+ <h5>The set comprehensions:</h5>
+ 
+- They provide a "faster" syntax to iteratively construct a set
+- A completely equivalent syntax to descriptive lists is used.
+
+ Case 1: A simple for..in
+ my_set = {number for number in range(3)}
+- Returns the set: 0,1,2
+- Case 2: A simple for..in with if
+my_set = {number for number in range(10) if number%2 == 0}
+- Returns the set: 0,2,4,6,8
+- Case 3: A simple for..in with if..else
+my_set = {number if number%2 == 0 else number/2
+for number in range(10)}
+- Returns the set: 0, 0.5, 2, 1.5, 4, 2.5, 6, 3.5, 8, 4.5
+(). and set.comprehensions1.py)
+
+Case 4: Nested Loops
+- Instead of writing :
+my_set = set()
+for i in range(2):
+	for j in range(3):
+		my_set.add((i,j))
+- we can write (on one line) the following:
+my_set = {(i, j) for i in range(2) for j in range(3)}
+
+Case 5: Nested Loops with condition
+- Instead of writing
+my_set = set()
+for i in range(6):
+	if i%2 == 0:
+	for j in range(6,10):
+		if j%2==1:
+			my_set.add((i,j))
+- we can write (on one line) the following:
+my_set = {(i, j) for i in range(6) if i%2==0 for j in range(6,10) if j%2==1}
+(see also set.comprehensions2.py, set.comprehensions3.py)
+
+Observation:
+- The above (1-3) is exactly the same as what we saw in
+lists. They simply use {, } instead of [, ].
+- While 4 can also be used for lists.
+
+
+<h5>Exercise 5.1: Poker</h5>
+Construct a program which:
+1) Will construct a set of the 52 cards of a deck of cards.
+Code a card as a tuple with two attributes:
+- The first (kind) is one of heart, diamond, spade,
+club
+- The second (number) is one of ace,2,3,...,9,10,
+jack, queen, king
+2) It will designate two players. Each player will be denoted by a
+(initially blank) set of cards in his hand.
+3) Each player will be dealt 5 cards at random.
+(the deal to be alternated between the two players)
+
+<h5>Exercise 5.2: Ace of Diamonds</h5>
+
+- Check if a player has a frame of ace (i.e.
+If a player who has four aces and one more card)
+
+<h5>Exercise 5.3: Straight</h5>
+
+Continuing the previous program:
+- Check if a player has a straight (i.e. all 5
+If the following question is answered, if the player has 5 cards in a row in the numbers e.g. 2,3,4,5,6 -
+we are not interested in their types)
+
+
+<h5>Exercise 6.1: Trilling</h5>
+If you need a reminder about the tumbler :
+- google: "Play tic tac toe"
+- Both players will be controlled by the user
+We will save the play on a 3x3 board and the basics
+steps in a replay are:
+- Print the frame
+- Select the next player
+- The player enters the square he is playing
+- Check if the player has won. If so, the frame is printed, the program terminates and displays an appropriate message.
+- If all slots are filled without a player winning, then the box is printed, the program terminates and an appropriate message is displayed.
+
+<h5>Exercise 6.2: Printing a frame</h5>
+Start by printing the frame (make it elegant e.g.: ) 
+
++---+---+---+
+
+| Ο | Χ |   |
+
++---+---+---+
+
+|   |   | Χ |
+
++---+---+---+
+
+| Ο |   |   |
+
++---+---+---+
+
+
+<h5>Exercise 6.3: Next player</h5>
+Construct the mechanism for selecting the next player, the mechanism and the printout if we have a draw (we have reached round 9).
+
+<h5>Exercise 6.4: User Login</h5>
+Build the part for user login. 
+- Check that the user input is valid(at the boundaries of the table) and that the square is empty.
+- Fill the square with the player symbol.
+
+<h5>Exercise 6.5: Winner Control</h5>
+Construct the place to check if the player won 
+- You must check on every row, column and both diagonals.
+- If we have a winner the program prints the box, who won and then terminate.
