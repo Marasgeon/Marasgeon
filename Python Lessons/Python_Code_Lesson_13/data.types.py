@@ -1,0 +1,11 @@
+# Example 2: data.types.py
+print(type(1))
+print(type(1.2))
+print(type(1+2j))
+print(type(True))
+print(type("Hello!"))
+print(type({1,2}))
+print(type((1,2)))
+print(type({1:2}))
+print(type(range(3)))
+print(type(frozenset({1,2})))
